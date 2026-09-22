@@ -1,13 +1,13 @@
 {% set name = "hatch-sphinx" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hatch_sphinx-{{ version }}.tar.gz
-  sha256: 85679560ac7876049b4c4a0cd2993812cb826b3df970b73035aa472d135de136
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/hatch_sphinx-{{ version }}.tar.gz
+  sha256: a50a136fd03e337f3cfb6bcda4859131560fc29f7495cc6f60636fbc5d822d5d
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - hatchling
+    - hatchling !=1.32.3
     - hatch-vcs
     - pip
   run:
